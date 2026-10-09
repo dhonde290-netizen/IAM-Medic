@@ -55,6 +55,7 @@ class SimulateFixRequest(BaseModel):
 
 
 @app.get("/api/health")
+@app.get("/health")
 def health_check():
     return {
         "status": "healthy",
@@ -66,11 +67,13 @@ def health_check():
 
 
 @app.get("/api/samples")
+@app.get("/samples")
 def get_samples():
     return {"samples": SAMPLE_ERRORS}
 
 
 @app.post("/api/diagnose")
+@app.post("/diagnose")
 def diagnose_error(req: DiagnoseRequest):
     if not req.error_text or not req.error_text.strip():
         raise HTTPException(status_code=400, detail="Error text cannot be empty.")
@@ -91,6 +94,7 @@ def diagnose_error(req: DiagnoseRequest):
 
 
 @app.post("/api/simulate-fix")
+@app.post("/simulate-fix")
 def simulate_fix(req: SimulateFixRequest):
     """
     Simulates testing the generated prescription policy against the blocked action.
