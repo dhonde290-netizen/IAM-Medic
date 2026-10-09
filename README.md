@@ -3,11 +3,17 @@
 > **The Plain-English AWS Error Translator, Real-World Analogy Generator & Least-Privilege Prescription Engine**  
 > Built for the AWS Weekend Challenge: *"Build an agent people actually enjoy using"* (Oct 9–12, 2026).
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-iam--medic.vercel.app-10b981?style=for-the-badge&logo=vercel)](https://iam-medic.vercel.app)
+[![AWS Bedrock](https://img.shields.io/badge/Powered%20By-Amazon%20Bedrock%20(Nova%20Lite)-FF9900?style=for-the-badge&logo=amazonaws)](https://aws.amazon.com/bedrock/)
+[![Challenge](https://img.shields.io/badge/AWS%20Weekend%20Challenge-%23agents-blue?style=for-the-badge)](https://builder.aws.com)
+
+**Live Web App**: [https://iam-medic.vercel.app](https://iam-medic.vercel.app)
+
 ---
 
 ## Overview
 
-**IAM Medic** is an intelligent developer companion built on **Amazon Bedrock (Amazon Nova Lite & Nova Micro)** that cures the universal pain of AWS IAM `AccessDenied` errors.
+**IAM Medic** is an intelligent developer companion built on **Amazon Bedrock (Amazon Nova Lite & Nova Micro)** and hosted globally on **Vercel Serverless Functions** that cures the universal pain of AWS IAM `AccessDenied` errors.
 
 Instead of generic chatbot conversations or walls of cryptic AWS stack traces, IAM Medic provides an innovative 5-block diagnostic prescription:
 
@@ -28,10 +34,11 @@ Instead of generic chatbot conversations or walls of cryptic AWS stack traces, I
                      │
                      ▼
            [ IAM Medic Web UI ]
-   (Minimalist Glassmorphism / Dark Theme)
+   (Vercel Edge CDN / Glassmorphism Dark Theme)
                      │
                      ▼
-          [ FastAPI Backend App ]
+      [ Vercel Serverless Python Function ]
+           (FastAPI /api/index.py)
                      │
         ┌────────────┴────────────┐
         ▼                         ▼
@@ -40,8 +47,10 @@ Instead of generic chatbot conversations or walls of cryptic AWS stack traces, I
  Converse API)             & Fallback Engine)
 ```
 
+- **Hosting & Edge Delivery**: [Vercel](https://vercel.com) (Serverless Python runtime with global CDN static asset distribution)
+- **Live Application**: [https://iam-medic.vercel.app](https://iam-medic.vercel.app)
 - **Cognitive Engine**: Amazon Bedrock via Converse API (`us.amazon.nova-lite-v1:0` & `us.amazon.nova-micro-v1:0`)
-- **Backend**: Python / FastAPI / `boto3`
+- **Backend**: Python / FastAPI / `boto3` on Vercel Serverless
 - **Frontend**: Vanilla HTML5, CSS3, Modern ES6+ JavaScript (zero framework bloat, sub-100ms load)
 - **Fallback Engine**: Intelligent deterministic synthesis for offline or zero-AWS credential environments.
 
