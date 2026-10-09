@@ -31,10 +31,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentDiagnosis = null;
 
+  // Resilient API Fetch Helper (Supports both /api/* and root /* environments)
+  async function apiFetch(endpoint, options = {}) {
+    const fullPath = endpoint.startsWith('/') ? endpoint : '/' + endpoint;
+    try {
+      let res = await fetch('/api' + fullPath, options);
+      if (res && res.ok) return res;
+      let resAlt = await fetch(fullPath, options);
+      if (resAlt && resAlt.ok) return resAlt;
+      return res || resAlt;
+    } catch (e) {
+      return fetch(fullPath, options);
+    }
+  }
+
   // 1. Fetch and render 1-click Preset Error Samples
   async function loadSamples() {
     try {
-      const res = await fetch('/api/samples');
+      const res = await apiFetch('/samples');
       const data = await res.json();
       if (data.samples && data.samples.length > 0) {
         presetChipsContainer.innerHTML = '';
@@ -99,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     outputSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
     try {
-      const response = await fetch('/api/diagnose', {
+      const response = await apiFetch('/diagnose', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
