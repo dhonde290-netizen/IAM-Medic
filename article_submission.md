@@ -4,7 +4,7 @@
 **Category**: AI Agents & Tools / AWS Bedrock  
 **Challenge**: AWS Weekend Challenge (Oct 9–12, 2026) — *"Build an agent people actually enjoy using"*  
 **Live Hosted Web App**: [https://iam-medic.vercel.app](https://iam-medic.vercel.app)  
-**GitHub Repository**: [dhonde290-netizen/IAM-Medic](https://github.com/dhonde290-netizen/IAM-Medic)  
+**GitHub Repository**: [dhonde290-netizen/IAM-Medic][def]  
 
 ---
 
@@ -227,12 +227,30 @@ ALL TESTS PASSED! [SUCCESS]
 ```
 
 ### Visual Proof & Artifacts
-- **Live Hosted Application**: [https://iam-medic.vercel.app](https://iam-medic.vercel.app) (Directly testable in your browser!)
-- **Application Overview**:
-  ![IAM Medic Desktop Overview](https://raw.githubusercontent.com/dhonde290-netizen/IAM-Medic/main/assets/hero_overview.png)
-- **Mobile Diagnostic Experience**:
-  ![IAM Medic Mobile View](https://raw.githubusercontent.com/dhonde290-netizen/IAM-Medic/main/assets/mobile_diagnosis.png)
-- **Source Code & Presets**: Available on GitHub at [dhonde290-netizen/IAM-Medic](https://github.com/dhonde290-netizen/IAM-Medic).
+- **Live Hosted Application**: [https://iam-medic.vercel.app](https://iam-medic.vercel.app) *(Directly testable in your browser!)*
+- **Live Video Demonstration**: [Watch Screen Recording Demo](https://github.com/dhonde290-netizen/IAM-Medic/raw/main/assets/demo_recording.mp4)
+
+#### 1. Interactive Error Input & Quick Sample Chips
+Paste raw error traces or select pre-configured production failure scenarios in one click:
+![1. Error Diagnostics Input & 1-Click Samples](https://raw.githubusercontent.com/dhonde290-netizen/IAM-Medic/main/assets/screenshot_01_input.png)
+
+#### 2. Triage Banner & The Real-World Analogy (Mental Model)
+Isolates caller vs target and delivers an intuitive physical mental model (e.g., diplomat with front-door credentials trying to access a secure vault lockbox without the specific KMS clearance):
+![2. Triage & Real-World Analogy](https://raw.githubusercontent.com/dhonde290-netizen/IAM-Medic/main/assets/screenshot_02_analogy.png)
+
+#### 3. Plain-English Triage, 3-Step Decision Pipeline & Failure Breakdown
+Visualizes the exact authorization gate (`Request Dispatched` &rarr; `Explicit Deny / Default Deny` &rarr; `Access Blocked`) alongside the structured root cause analysis:
+![3. Evaluation Gate & Failure Breakdown](https://raw.githubusercontent.com/dhonde290-netizen/IAM-Medic/main/assets/screenshot_03_decision_gate.png)
+
+#### 4. Architectural Pro-Tips & Prescribed Least-Privilege Policy
+Delivers Well-Architected security best practices (Scope Down, Guardrails, CloudTrail Observability) and a surgical, zero-wildcard JSON policy statement:
+![4. Pro-Tips & Least-Privilege Policy](https://raw.githubusercontent.com/dhonde290-netizen/IAM-Medic/main/assets/screenshot_04_pro_tips.png)
+
+#### 5. 1-Click AWS CLI Remediation Command
+Pre-renders the exact AWS CLI remediation command ready to copy and run:
+![5. Remediation Command & 1-Click CLI](https://raw.githubusercontent.com/dhonde290-netizen/IAM-Medic/main/assets/screenshot_05_remediation.png)
+
+- **Source Code & Presets**: Available on GitHub at [dhonde290-netizen/IAM-Medic][def].
 
 ---
 
@@ -250,13 +268,10 @@ Building IAM Medic for this challenge reinforced three core principles of develo
 
 ---
 
-## Builder Profile & Checklist
-- **Builder Center Tag**: `#agents`
-- **Builder Profile Checklist**:
-  - [x] Profile Image configured
-  - [x] Country configured
-  - [x] About section filled in
 - **Live Web App**: [https://iam-medic.vercel.app](https://iam-medic.vercel.app)
-- **GitHub Repository**: [https://github.com/dhonde290-netizen/IAM-Medic](https://github.com/dhonde290-netizen/IAM-Medic)
+- **GitHub Repository**: [https://github.com/dhonde290-netizen/IAM-Medic][def]
 
-*Built with passion for the AWS Weekend Challenge: "Build an agent people actually enjoy using" (October 9–12, 2026).*
+
+
+
+[def]: https://github.com/dhonde290-netizen/IAM-Medic
