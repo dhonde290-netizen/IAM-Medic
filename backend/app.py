@@ -148,10 +148,25 @@ def simulate_fix(req: SimulateFixRequest):
     }
 
 
-# Mount frontend static files
-if FRONTEND_DIR.exists():
-    app.mount("/static", StaticFiles(directory=str(FRONTEND_DIR)), name="static")
+BASE_DIR = Path(__file__).resolve().parent.parent
+FRONTEND_DIR = BASE_DIR / "frontend"
+PUBLIC_DIR = BASE_DIR / "public"
 
-    @app.get("/")
-    def serve_index():
-        return FileResponse(FRONTEND_DIR / "index.html")
+# Mount frontend static files
+for static_path in [PUBLIC_DIR / "static", FRONTEND_DIR, PUBLIC_DIR]:
+    if static_path.exists():
+        app.mount("/static", StaticFiles(directory=str(static_path)), name="static")
+        break
+
+@app.get("/")
+def serve_index():
+    for candidate in [
+        PUBLIC_DIR / "index.html",
+        FRONTEND_DIR / "index.html",
+        BASE_DIR / "index.html",
+        Path("public/index.html"),
+        Path("frontend/index.html")
+    ]:
+        if candidate.exists():
+            return FileResponse(candidate)
+    return {"message": "IAM Medic API is running. Check /api/health or frontend assets."}
