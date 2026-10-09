@@ -4,7 +4,7 @@
 **Category**: AI Agents & Tools / AWS Bedrock  
 **Challenge**: AWS Weekend Challenge (Oct 9–12, 2026) — *"Build an agent people actually enjoy using"*  
 **Live Hosted Web App**: [https://iam-medic.vercel.app](https://iam-medic.vercel.app)  
-**GitHub Repository**: [dhonde290-netizen/IAM-Medic][def]  
+**GitHub Repository**: [https://github.com/dhonde290-netizen/IAM-Medic](https://github.com/dhonde290-netizen/IAM-Medic)  
 
 ---
 
@@ -124,9 +124,9 @@ AWS authorization evaluation is notoriously abstract. IAM Medic translates compl
 | **Secrets Manager Retrieval** | *The Diplomatic Courier Wax Seal* | Your container application knows the folder name on the label, but security refuses to break the wax seal without the confidential handler clearance stamp. |
 
 ### The 3-Step Interactive Decision Gate
-Directly below the analogy, IAM Medic displays an interactive 3-step decision pipeline:
-
-$$\text{[ 1. Request Dispatched ]} \longrightarrow \mathbf{[ \text{2. Default Deny / Two-Key / Explicit Deny} ]} \longrightarrow \text{[ 3. Access Blocked ]}$$
+```text
+[ 1. Request Dispatched ] ──> [ 2. Default Deny / Two-Key / Explicit Deny ] ──> [ 3. Access Blocked ]
+```
 
 This visually demystifies *why* AWS said no—whether it hit an **Explicit Deny** gate, failed under **Default Deny** rules, or hit the **Two-Key Rule** across KMS and IAM.
 
@@ -229,28 +229,39 @@ ALL TESTS PASSED! [SUCCESS]
 ### Visual Proof & Artifacts
 - **Live Hosted Application**: [https://iam-medic.vercel.app](https://iam-medic.vercel.app) *(Directly testable in your browser!)*
 - **Live Video Demonstration**: [Watch Screen Recording Demo](https://github.com/dhonde290-netizen/IAM-Medic/raw/main/assets/demo_recording.mp4)
+- **Source Code & Presets**: [https://github.com/dhonde290-netizen/IAM-Medic](https://github.com/dhonde290-netizen/IAM-Medic)
+
+*(Note: In the Builder Center editor, use the "Insert image" button in the toolbar or drag and drop to place each screenshot at the spots marked below)*
 
 #### 1. Interactive Error Input & Quick Sample Chips
-Paste raw error traces or select pre-configured production failure scenarios in one click:
-![1. Error Diagnostics Input & 1-Click Samples](https://raw.githubusercontent.com/dhonde290-netizen/IAM-Medic/main/assets/screenshot_01_input.png)
+Paste raw error traces or select pre-configured production failure scenarios in one click.
+
+> 📷 **[Upload Screenshot 1 here: `assets/screenshot_01_input.png` / `Screenshot 2026-10-09 103556.png`]**  
+> *Shows the live web application on `iam-medic.vercel.app` with quick sample chips and raw error input.*
 
 #### 2. Triage Banner & The Real-World Analogy (Mental Model)
-Isolates caller vs target and delivers an intuitive physical mental model (e.g., diplomat with front-door credentials trying to access a secure vault lockbox without the specific KMS clearance):
-![2. Triage & Real-World Analogy](https://raw.githubusercontent.com/dhonde290-netizen/IAM-Medic/main/assets/screenshot_02_analogy.png)
+Isolates caller vs target and delivers an intuitive physical mental model (e.g., diplomat with front-door credentials trying to access a secure vault lockbox without the specific KMS clearance).
+
+> 📷 **[Upload Screenshot 2 here: `assets/screenshot_02_analogy.png` / `Screenshot 2026-10-09 103606.png`]**  
+> *Shows the 403 Access Denied status, Caller/Target meta ARNs, and the Diplomatic Vault Analogy.*
 
 #### 3. Plain-English Triage, 3-Step Decision Pipeline & Failure Breakdown
-Visualizes the exact authorization gate (`Request Dispatched` &rarr; `Explicit Deny / Default Deny` &rarr; `Access Blocked`) alongside the structured root cause analysis:
-![3. Evaluation Gate & Failure Breakdown](https://raw.githubusercontent.com/dhonde290-netizen/IAM-Medic/main/assets/screenshot_03_decision_gate.png)
+Visualizes the exact authorization gate (`Request Dispatched` ➔ `Explicit Deny Encountered` ➔ `Access Blocked`) alongside the structured root cause analysis.
+
+> 📷 **[Upload Screenshot 3 here: `assets/screenshot_03_decision_gate.png` / `Screenshot 2026-10-09 103611.png`]**  
+> *Shows the 3-step decision pipeline and the structured root-cause anatomy table.*
 
 #### 4. Architectural Pro-Tips & Prescribed Least-Privilege Policy
-Delivers Well-Architected security best practices (Scope Down, Guardrails, CloudTrail Observability) and a surgical, zero-wildcard JSON policy statement:
-![4. Pro-Tips & Least-Privilege Policy](https://raw.githubusercontent.com/dhonde290-netizen/IAM-Medic/main/assets/screenshot_04_pro_tips.png)
+Delivers Well-Architected security best practices (Scope Down, Guardrails, CloudTrail Observability) and a surgical, zero-wildcard JSON policy statement.
+
+> 📷 **[Upload Screenshot 4 here: `assets/screenshot_04_pro_tips.png` / `Screenshot 2026-10-09 103617.png`]**  
+> *Shows Well-Architected recommendations and the exact JSON least-privilege policy snippet.*
 
 #### 5. 1-Click AWS CLI Remediation Command
-Pre-renders the exact AWS CLI remediation command ready to copy and run:
-![5. Remediation Command & 1-Click CLI](https://raw.githubusercontent.com/dhonde290-netizen/IAM-Medic/main/assets/screenshot_05_remediation.png)
+Pre-renders the exact AWS CLI remediation command ready to copy and run in your terminal.
 
-- **Source Code & Presets**: Available on GitHub at [dhonde290-netizen/IAM-Medic][def].
+> 📷 **[Upload Screenshot 5 here: `assets/screenshot_05_remediation.png` / `Screenshot 2026-10-09 103625.png`]**  
+> *Shows the pre-rendered `aws iam put-role-policy` command with 1-click clipboard copy.*
 
 ---
 
@@ -269,9 +280,4 @@ Building IAM Medic for this challenge reinforced three core principles of develo
 ---
 
 - **Live Web App**: [https://iam-medic.vercel.app](https://iam-medic.vercel.app)
-- **GitHub Repository**: [https://github.com/dhonde290-netizen/IAM-Medic][def]
-
-
-
-
-[def]: https://github.com/dhonde290-netizen/IAM-Medic
+- **GitHub Repository**: [https://github.com/dhonde290-netizen/IAM-Medic](https://github.com/dhonde290-netizen/IAM-Medic)
