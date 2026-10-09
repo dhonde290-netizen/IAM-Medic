@@ -5,8 +5,6 @@
 
 ---
 
-![IAM Medic Showcase](assets/hero_overview.png)
-
 ## Overview
 
 **IAM Medic** is an intelligent developer companion built on **Amazon Bedrock (Amazon Nova Lite & Nova Micro)** that cures the universal pain of AWS IAM `AccessDenied` errors.
